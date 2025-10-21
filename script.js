@@ -57,15 +57,18 @@ function inicializarMapa() {
   //conecta o botão de busca pelo id
   const btn = document.getElementById("btn-buscar");
   const input = document.getElementById("endereço");
+  let ultimoCep = "";
+
   btn.addEventListener("click", () => {
-    location.reload();
     const query = input.value.trim();
-    if (!query) {
-      alert("Digite um CEP ou endereço para buscar! ");
-      return;
-    }
-    buscarMaisProxima(query);
-  });
+  if (query !== ultimoCEP) {
+    location.reload(); // só recarrega se for um CEP novo
+    return;
+  }
+
+  buscarMaisProxima(query);
+  ultimoCEP = query;
+}); 
 
   //carrega as unidados do json
   carregarUnidades();
