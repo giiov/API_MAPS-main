@@ -76,6 +76,7 @@ function inicializarMapa() {
   if (marcadorOrigem) {
     marcadorOrigem.setMap(null);
     marcadorOrigem = null;
+    
   }
 
   // Reseta todos os ícones das unidades para o padrão
