@@ -16,8 +16,8 @@ let iconUnidade, etecProxima, iconOrigem;
 function inicializarMapa() {
   //cria o mapa e o zoom inicial
   mapa = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -23.4442, lng: -46.919  },
-    zoom: 14,
+    center: { lat: -23.5505, lng: -46.6333},
+    zoom: 11,
   });
 
   //serviços do google
@@ -32,7 +32,7 @@ function inicializarMapa() {
     path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z",
     fillColor: "rgb(185, 0, 28)",
     fillOpacity: 1,
-    strokeWeight: 2,
+    strokeWeight: 3,
     strokeColor: "#fff",
     scale: 1.5,
     anchor: new google.maps.Point(12, 22),
