@@ -57,18 +57,31 @@ function inicializarMapa() {
   //conecta o botão de busca pelo id
   const btn = document.getElementById("btn-buscar");
   const input = document.getElementById("endereço");
-  let ultimoCep = "";
-
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", () => { 
     const query = input.value.trim();
-  if (query !== ultimoCEP) {
-    location.reload(); // só recarrega se for um CEP novo
-    return;
+    if (!query) {
+      alert("Digite um CEP ou endereço para buscar! ");
+      return;
+    }
+
+     if (marcadorDestaque) {
+    marcadorDestaque.setMap(null);
+    marcadorDestaque = null;
   }
 
-  buscarMaisProxima(query);
-  ultimoCEP = query;
-}); 
+  // Remove marcador de origem anterior
+  if (marcadorOrigem) {
+    marcadorOrigem.setMap(null);
+    marcadorOrigem = null;
+  }
+
+  // Reseta todos os ícones das unidades para o padrão
+  for (const m of marcadores) {
+    m.marker.setIcon(iconUnidade);
+  }
+  
+    buscarMaisProxima(query);
+  });
 
   //carrega as unidados do json
   carregarUnidades();
