@@ -1,0 +1,28 @@
+{
+  "unidades": [
+    {
+      "id": 1,
+      "nome": "ETEC Bartolomeu Bueno da Silva",
+      "endereco": "Av. Ten. Marques, s/n - Fazendinha, Santana de Parnaíba - SP",
+      "cep": "06529-001"
+    },
+    {
+      "id": 2,
+      "nome": "ETEC Profª Ermelinda Giannini Teixeira",
+      "endereco": "Rua Fernão Dias Falcão, 196 - Centro, Santana de Parnaíba - SP",
+      "cep": "06501-120"
+    },
+    {
+      "id": 3,
+      "nome": "ETEC Gino Rezaghi",
+      "endereco": "Av. Arujá, 175 - Colina Maria Luiza, Cajamar - SP",
+      "cep": "07787-530"
+    },
+    {
+      "id": 4,
+      "nome": "ETEC Carolina Carinhato Sampaio",
+      "endereco": "Rua Maria Moura da Conceição, s/n - Grajaú, São Paulo - SP",
+      "cep": "04855-257"
+    }
+  ]
+}

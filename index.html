@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPS ETEC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> Mapa de Unidade - ETEC</h1>
+
+    <!-- para buscar endereço (digitar cep e botão para buscar)-->
+    <div class="controls">
+        <input type="text" id="endereço" placeholder="Digite um endereço ou CEP"/>
+        <button id="btn-buscar">Buscar</button>
+    </div>
+
+    <!--onde o mapa será exibido-->
+    <div id="map"></div>
+
+        <script src="script.js"></script>
+
+
+        <!--carregamento do google maps api-->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGjNnTxy2WjE_Srf0W8PlEzl_COym3_ho&callback=inicializarMapa">
+        </script>
+     
+</body>
+</html>
