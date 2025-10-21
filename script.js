@@ -16,8 +16,8 @@ let iconUnidade, etecProxima, iconOrigem;
 function inicializarMapa() {
   //cria o mapa e o zoom inicial
   mapa = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -23.5505, lng: -46.6333 },
-    zoom: 11,
+    center: { lat: -23.4442, lng: -46.919  },
+    zoom: 14,
   });
 
   //serviços do google
@@ -30,30 +30,30 @@ function inicializarMapa() {
 
   iconUnidade = {
     path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z",
-    fillColor: "#8B0000",
+    fillColor: "rgb(185, 0, 28)",
     fillOpacity: 1,
-    strokeWeight: 1,
-    strokeColor: "#5a0000",
+    strokeWeight: 2,
+    strokeColor: "#fff",
     scale: 1.5,
     anchor: new google.maps.Point(12, 22),
   };
 
   etecProxima = {
     path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z",
-    fillColor: "#B22222",
+    fillColor: "#800115",
     fillOpacity: 1,
     strokeWeight: 2,
-    strokeColor: "#FFD700",
+    strokeColor: "#800115",
     scale: 1.8,
     anchor: new google.maps.Point(12, 22),
   };
 
   iconOrigem = {
     path: google.maps.SymbolPath.CIRCLE,
-    fillColor: "#4B0000",
+    fillColor: "#800115",
     fillOpacity: 1,
     strokeWeight: 2,
-    strokeColor: "#FFFFFF",
+    strokeColor: "#",
     scale: 6,
   };
 
