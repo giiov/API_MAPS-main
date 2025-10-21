@@ -4,9 +4,12 @@ let geocoder; // para converter o endereço
 let directionsService; //calcula rotas
 let directionsRenderer; //desenha rotas no mapa
 const marcadores = []; //lista de marcadores criados (unidade, infowindow, marker)
-let marcadorDestaque = null; //indica a unidade mais proxima
 
+
+let marcadorDestaque = null; //indica a unidade mais proxima
+let marcadorOrigem = null;
 let iconUnidade, etecProxima, iconOrigem;
+  
 
 //FUNÇÃO inicializarMapa()
 //inicializando e chamando a api
@@ -79,7 +82,7 @@ function inicializarMapa() {
   for (const m of marcadores) {
     m.marker.setIcon(iconUnidade);
   }
-  
+
     buscarMaisProxima(query);
   });
 
@@ -242,8 +245,6 @@ function destacarUnidadeETraçarRota(origem, obj) {
   const unidade = obj.unidade;
   const destino = { lat: obj.lat, lng: obj.lng };
   const endereco = endereço;
-  let marcadorDestaque = null;
-  let marcadorOrigem = null;
 
   if (marcadorDestaque) {
     marcadorDestaque.setMap(null);
