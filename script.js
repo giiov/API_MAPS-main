@@ -58,6 +58,7 @@ function inicializarMapa() {
   const btn = document.getElementById("btn-buscar");
   const input = document.getElementById("endereço");
   btn.addEventListener("click", () => {
+    location.reload();
     const query = input.value.trim();
     if (!query) {
       alert("Digite um CEP ou endereço para buscar! ");
